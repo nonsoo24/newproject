@@ -21,14 +21,83 @@
 
 <body>
 
+    <header>
+        <div id="content1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item pt-3">
+                                <i class="fas fa-2x fa-bell" style="color: black!important;"></i>
+                                <!-- <a class="nav-link" href="#">Logout</a> -->
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="media align-items-center">
+                                        <span class="">
+                                            <img src="img\clientIcon.png" style="width:50px; height:50px;"> Henry Aboki
+
+                                        </span>
+                                        <div class="media-body ml-2 d-none d-lg-block">
+                                            <span class="mb-0 text-sm  font-weight-bold"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                                    <div class=" dropdown-header noti-title">
+                                        <h6 class="text-overflow m-0">Welcome!</h6>
+                                    </div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ni ni-single-02"></i>
+                                        <span>My profile</span>
+                                    </a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ni ni-user-run"></i>
+                                        <span>Sign out</span>
+                                    </a>
+
+                                    <!-- <a href="#!" class="dropdown-item">
+                                                    <i class="ni ni-user-run"></i>
+                                                    <span>Logout</span> -->
+                                    </a>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item active"> -->
+                            <!-- <i class="fas fa-1x fa-bell" style="color: white!important;"></i> -->
+                            <!-- <a class="nav-link" href="#">Logout</a>
+                                    </li> -->
+                            <!-- <li class="nav-item">
+                                        <a class="nav-link" href="#">Page</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Page</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Page</a>
+                                    </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
     <div class="wrapper">
         <!-- Sidebar  -->
         <nav id="sidebar">
-            <!-- <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
-            </div> -->
-
-            <ul class="list-unstyled components text-sm">
+            <ul class="list-unstyled components text-sm pt-5" style="overflow-y: scroll; font-size: 15px">
                 <!-- <li class="active">
                     <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -47,13 +116,13 @@
                     <a href="#">Home</a>
                 </li> -->
                 <li>
-                    <a href="#">Account Enquiry</a>
+                    <a href="#"><i class="fas fa-user-alt"></i>  Account Enquiry</a>
                 </li>
                 <li>
-                    <a href="#">Transfer Funds</a>
+                    <a href="#"><i class="fas fa-random"></i> Transfer Funds</a>
                 </li>
                 <li>
-                    <a href="#">Pay Bills</a>
+                    <a href="#"><i class="fas fa-money-bill"></i> Pay Bills</a>
                 </li>
 
                 <li>
@@ -71,7 +140,7 @@
                     <a href="#">Standing Instructions</a>
                 </li>
                 <li>
-                    <a href="#">Mobile Banking</a>
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Mobile Banking</a>
                 </li>
                 <li>
                     <a href="#">Unit Trust</a>
@@ -141,57 +210,18 @@
         </nav>
 
         <!-- Page Content  -->
-        <div id="content">
-
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <div class="container-fluid">
-
-                    <button type="button" id="sidebarCollapse" class="btn btn-info">
-                        <i class="fas fa-align-left"></i>
-                    </button>
-                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <i class="fas fa-align-justify"></i>
-                    </button>
-
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="nav navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <i class="fas fa-2x fa-bell" style="color: black!important;"></i>
-                                <!-- <a class="nav-link" href="#">Logout</a> -->
-                            </li>
-                            <li class="nav-item active">
-                                <!-- <i class="fas fa-1x fa-bell" style="color: white!important;"></i> -->
-                                <a class="nav-link" href="#">Logout</a>
-                            </li>
-
-                            <!-- <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li> -->
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-            <div class="d-flex">
-                <div>
-                    <h4>Personal Banking</h4>
-                </div class="text-left">
-                <div class="text-right">
-                    <h6>You are in a secured site</h6>
-                </div>
+        <div id="content2" style="padding-top: 98px">
+            <div class="secure text-right px-2">
+                <h6 class="text-white">You are in a secured site</h6>
+            </div>
+            <div class="d-flex container">
+                <h4>Personal Banking</h4>
             </div>
 
-            <section>
+            <section class="container">
 
-                <h5 class="pt-4 text-weight-600">Welcome Henry Aboki</h5>
-                <div class="d-flex">
+                <!-- <h5 class="pt-4 text-weight-600">Welcome Henry Aboki</h5> -->
+                <div class="d-flex pt-5">
                     <div class="transfer-image">
                         <img src="img\picture.jpg" alt="" style="width: 250px; height: 250px">
                     </div>
@@ -199,7 +229,8 @@
                         <h4>Transfer <span class="text-danger">Funds</span></h4>
                         <p>You can transfer any available amount to your own EpicEuro Bank Accounts or other Accounts in
                             other banks anywhere in the world.</p>
-                        <p class="text-sm">For security reasons, the bank will limit your transfer to third party accounts within
+                        <p class="text-sm">For security reasons, the bank will limit your transfer to third party
+                            accounts within
                             Stacord Bank at $5,000.00 and other Banks at $50,000.00 per day. For Non-Resident Account,
                             there is no limit to the amount you can transfer.</p>
                     </div>
@@ -208,12 +239,12 @@
                     loan/financing is only accepted during these hours.</p>
             </section>
 
-            <section>
+            <section class="container">
                 <div class="pt-3">
                     <p class="text-uppercase"> Fund Transfer from Account Number </p>
                 </div>
 
-                <div>
+                <div class="pb-5">
                     <table>
                         <!-- <tr>
                                       <th>Company</th>
@@ -289,7 +320,7 @@
                 });
 
                 $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar, #content').toggleClass('active');
+                    $('#sidebar, #content1').toggleClass('active');
                     $('.collapse.in').toggleClass('in');
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });

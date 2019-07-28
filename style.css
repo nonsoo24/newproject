@@ -1,42 +1,3 @@
-/*
-    DEMO STYLE
-*/
-
-
-/* navbar styling */
-.navbar-top{
-    z-index: 1 !important;
-    background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.1)), url('/Assets/Images/dashboard-01.png')no-repeat center !important; 
-    padding: 0rem 0rem !important;
-}
-
-
-.navbar-collapse {
-    padding-top: 40px !important;
-}
-
-.nav-link {
-    font-weight: 600 !important;
-}
-
-.fas {
-    color: #7AAF34 !important;
-}
-
-.text-success {
-    color: #7AAF34 !important;
-}
-.text-black{
-    color: black;
-}
-
-#lblNotificationCount {
- position: absolute;
- border-radius: 50%;
- width: inherit;
- top:9px;
-}
-
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 body {
     font-family: 'Poppins', sans-serif;
@@ -64,7 +25,7 @@ a:focus {
     background: #fff;
     border: none;
     border-radius: 0;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -185,9 +146,9 @@ a.article:hover {
     CONTENT STYLE
 ----------------------------------------------------- */
 
-#content {
+#content1, #content2 {
     width: calc(100% - 250px);
-    padding: 40px;
+    /* padding: 40px; */
     min-height: 100vh;
     transition: all 0.3s;
     position: absolute;
@@ -195,7 +156,7 @@ a.article:hover {
     right: 0;
 }
 
-#content.active {
+#content1, #content2.active {
     width: 100%;
 }
 
@@ -210,6 +171,10 @@ table {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
+  }
+
+  .secure{
+      background-color: #000;
   }
 
   /* tr:nth-child(even) {
@@ -227,10 +192,10 @@ table {
     #sidebar.active {
         margin-left: 0;
     }
-    #content {
+    #content1, #content2 {
         width: 100%;
     }
-    #content.active {
+    #content1.active {
         width: calc(100% - 250px);
     }
     #sidebarCollapse {
