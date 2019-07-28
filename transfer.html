@@ -25,6 +25,7 @@
         <div id="content1">
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
                 <div class="container-fluid">
+                    <img src="" alt="">
                     <h3>Logo</h3>
 
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -34,7 +35,9 @@
                                     aria-haspopup="true" aria-expanded="false">
                                     <div class="media align-items-center">
                                         <span class="">
-                                            <img src="img\clientIcon.png" style="width:50px; height:50px;"> Henry Aboki
+                                            <img src="img\clientIcon.png" style="width:50px; height:50px;"
+                                                class="d-inline-flex">
+                                            <h6 class="text-light d-inline-flex">Henry Aboki</h6>
 
                                         </span>
                                         <div class="media-body ml-2 d-none d-lg-block">
@@ -57,7 +60,7 @@
 
                             </li>
                             <li class="nav-item active" style="padding-top: 12px">
-                                <a class="nav-link" href="#">Logout</a>
+                                <a class="nav-link text-light" href="#">Logout</a>
                             </li>
                         </ul>
                     </div>
@@ -183,9 +186,9 @@
         </nav>
 
         <!-- Page Content  -->
-        <div id="content2" style="padding-top: 80px">
-            <div class="secure text-right px-2">
-                <h6 class="text-white">You are in a secured site</h6>
+        <div id="content2" style="padding-top:80px">
+            <div class="secure text-right">
+                <h6 class="text-white p-1 banner" id="banner-message">You are in a secured site</h6>
             </div>
             <div class="d-flex container">
                 <h4>Personal Banking</h4>
@@ -298,6 +301,25 @@
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
             });
+
+            window.onscroll = function () {
+                myFunction()
+            };
+
+            // Get the header
+            var header = document.getElementById("banner-message");
+
+            // Get the offset position of the navbar
+            var sticky = header.offsetTop;
+
+            // Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
+            function myFunction() {
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
         </script>
 </body>
 

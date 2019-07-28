@@ -22,9 +22,10 @@ a:focus {
 
 .navbar {
     /* padding: 15px 10px; */
-    background: #fff;
+    background: #0063B1 !important;
     border: none;
     border-radius: 0;
+    color: #fff;
     /* margin-bottom: 40px; */
     box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
 }
@@ -41,7 +42,16 @@ a:focus {
     border-bottom: 1px dashed #ddd;
     margin: 40px 0;
 }
+nav ul li:nth-last-child() a:hover{
+    color: #91640F;
+}
 
+.personal-info, .account-info{
+    font-size: 12px;
+}
+.offshore{
+    background-color: #0063B1;
+}
 /* ---------------------------------------------------
     SIDEBAR STYLE
 ----------------------------------------------------- */
@@ -91,8 +101,9 @@ a:focus {
 }
 
 #sidebar ul li a:hover {
-    color: #712323;
+    color: #0063B1;
     background: #fff;
+    font-size: 16px;
 }
 
 #sidebar ul li.active>a,
@@ -174,13 +185,22 @@ table {
   }
 
   .secure{
-      background-color: #000;
+      background-color: #BDD8E5;
+  }
+
+  .banner{
+      color: #4B4B4B !important;
   }
 
   .account-summary-info{
       font-size: 15px;
       color: #000;
       padding: 0px 0px;
+  }
+
+  .btn-outline-dark:hover {
+    background-color: #0063B1 !important;
+    border: 1px solid #0063B1;
   }
 
   tr td:first-child {
@@ -191,6 +211,17 @@ table {
     border: 1px solid black;
     border-collapse: collapse;
   }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
+  /* .sticky + .content {
+    padding-top: 102px;
+  } */
+
 
 
   /* tr:nth-child(even) {
