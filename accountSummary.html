@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>Transfer</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css"
+        integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+    <!-- Our Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+</head>
+
+<body>
+
+    <header>
+        <div id="content1">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-info">
+                        <i class="fas fa-align-left"></i>
+                    </button>
+                    <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <i class="fas fa-align-justify"></i>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="nav navbar-nav ml-auto">
+                            <li class="nav-item pt-3">
+                                <i class="fas fa-2x fa-bell" style="color: black!important;"></i>
+                                <!-- <a class="nav-link" href="#">Logout</a> -->
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link pr-0" href="#" role="button" data-toggle="dropdown"
+                                    aria-haspopup="true" aria-expanded="false">
+                                    <div class="media align-items-center">
+                                        <span class="">
+                                            <img src="img\clientIcon.png" style="width:50px; height:50px;"> Henry Aboki
+
+                                        </span>
+                                        <div class="media-body ml-2 d-none d-lg-block">
+                                            <span class="mb-0 text-sm  font-weight-bold"></span>
+                                        </div>
+                                    </div>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-arrow dropdown-menu-right">
+                                    <div class=" dropdown-header noti-title">
+                                        <h6 class="text-overflow m-0">Welcome!</h6>
+                                    </div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ni ni-single-02"></i>
+                                        <span>My profile</span>
+                                    </a>
+
+                                    <div class="dropdown-divider"></div>
+                                    <a href="#" class="dropdown-item">
+                                        <i class="ni ni-user-run"></i>
+                                        <span>Sign out</span>
+                                    </a>
+
+                                    <!-- <a href="#!" class="dropdown-item">
+                                                    <i class="ni ni-user-run"></i>
+                                                    <span>Logout</span> -->
+                                    </a>
+                                </div>
+                            </li>
+                            <!-- <li class="nav-item active"> -->
+                            <!-- <i class="fas fa-1x fa-bell" style="color: white!important;"></i> -->
+                            <!-- <a class="nav-link" href="#">Logout</a>
+                                    </li> -->
+                            <!-- <li class="nav-item">
+                                        <a class="nav-link" href="#">Page</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Page</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Page</a>
+                                    </li> -->
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        <!-- Sidebar  -->
+        <nav id="sidebar">
+            <ul class="list-unstyled components text-sm pt-5" style="overflow-y: scroll; font-size: 15px">
+                <!-- <li class="active">
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <ul class="collapse list-unstyled" id="homeSubmenu">
+                        <li>
+                            <a href="#">Home 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Home 3</a>
+                        </li>
+                    </ul>
+                </li> -->
+                <!-- <li>
+                    <a href="#">Home</a>
+                </li> -->
+                <li>
+                    <a href="#"><i class="fas fa-user-alt"></i>  Account Enquiry</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-random"></i> Transfer Funds</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-money-bill"></i> Pay Bills</a>
+                </li>
+
+                <li>
+                    <a href="#">Prepaid Reload</a>
+                </li>
+                <li>
+                    <a href="#">Western Union</a>
+                </li>
+
+                <li>
+                    <a href="#">Remittance</a>
+                </li>
+
+                <li>
+                    <a href="#">Standing Instructions</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fas fa-mobile-alt"></i> Mobile Banking</a>
+                </li>
+                <li>
+                    <a href="#">Unit Trust</a>
+                </li>
+                <li>
+                    <a href="#">Share Trading</a>
+                </li>
+                <li>
+                    <a href="#">eIPO</a>
+                </li>
+                <li>
+                    <a href="#">Cheque Management</a>
+                </li>
+                <li>
+                    <a href="#">EPF</a>
+                </li>
+                <li>
+                    <a href="#">eApplication</a>
+                </li>
+                <li>
+                    <a href="#">Risk Profiler</a>
+                </li>
+                <li>
+                    <a href="#">Clicks Transaction</a>
+                </li>
+                <li>
+                    <a href="#">Manage Center</a>
+                </li>
+                <li>
+                    <a href="#">Message Center</a>
+                </li>
+                <li>
+                    <a href="#">Update Profile</a>
+                </li>
+                <li>
+                    <a href="#">ATM Services</a>
+                </li>
+                <li>
+                    <a href="#">Octo Tools</a>
+                </li>
+
+                <!-- <li>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false"
+                        class="dropdown-toggle">Pages</a>
+                    <ul class="collapse list-unstyled" id="pageSubmenu">
+                        <li>
+                            <a href="#">Page 1</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 2</a>
+                        </li>
+                        <li>
+                            <a href="#">Page 3</a>
+                        </li>
+                    </ul>
+                </li> -->
+            </ul>
+
+            <!-- <ul class="list-unstyled CTAs">
+                <li>
+                    <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
+                </li>
+                <li>
+                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                </li>
+            </ul> -->
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content2" style="padding-top: 98px">
+            <div class="secure text-right px-2">
+                <h6 class="text-white">You are in a secured site</h6>
+            </div>
+            <div class="d-flex container">
+                <h4>Personal Banking</h4>
+            </div>
+
+            <section class="container">
+                <div class="pt-3">
+                    <p> You can view your current, savings-i, Offshore and foreign currency information here. Just click on the account number to view details. To view all accounts that you have with EpicEuro Bank. Kindly click on 'Account Summary"' </p>
+                </div>
+                <div class="secure">
+                    <h4 class="text-white p-2">Offshore Domiciliary Account</h4>
+                </div>
+
+                <div class="pb-5">
+                        <table>
+                                <tr>
+                                  <th>Account Number</th>
+                                  <th>Account Type</th>
+                                  <th>Account Balance</th>
+                                  <th>Account Status</th>
+                                </tr>
+                                <tr>
+                                  <td>1835708212</td>
+                                  <td>Foreign Savings Account</td>
+                                  <td>USD0</td>
+                                  <td>Active</td>
+                                </tr>
+
+                                <tr>
+                                        <th>Email Address</th>
+                                        <th>Contact Address</th>
+                                        <th>City</th>
+                                        <th>Country of Residence</th>
+                                      </tr>
+                                <tr>
+                                  <td>dozyamadi@gmail.com</td>
+                                  <td>8483 park lane Hereford</td>
+                                  <td>London</td>
+                                  <td>United Kingdom</td>
+                                </tr>
+                                <tr>
+                                        <th>Phone Number</th>
+                                        <th>Next of Kin</th>
+                                        <th>Next Kin Mobile</th>
+                                        <th>Zip Code</th>
+                                      </tr>
+                                <tr>
+                                  <td>Island Trading</td>
+                                  <td>Helen Bennett</td>
+                                  <td>UK</td>
+                                  <td>10890</td>
+                                </tr>
+                              </table>
+                </div>
+            </section>
+        </div>
+
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <!-- Popper.JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"
+            integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous">
+        </script>
+        <!-- Bootstrap JS -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+            integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous">
+        </script>
+        <!-- jQuery Custom Scroller CDN -->
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js">
+        </script>
+        <!-- Font Awesome JS -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js"
+            integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous">
+        </script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js"
+            integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
+        </script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar, #content1').toggleClass('active');
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script>
+</body>
+
+</html>
