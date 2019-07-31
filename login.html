@@ -18,60 +18,88 @@
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet">
 
+    <!-- font-awesome -->
+    <script src="https://kit.fontawesome.com/73e4a67fd5.js"></script>
+
     <!-- date picker css -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
     <!-- <a href="https://github.com/eternicode/bootstrap-datepicker">eternicode bootstrap-datepicker</a> -->
     <!-- Our Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="stylesheet" href="loginform.css"> -->
+    <link rel="stylesheet" href="loginform.css">
 
 </head>
-
-<style>
-    div[class="container-fluid"] {
-        text-align: left !important;
-    }
-</style>
 
 <body>
 
     <header>
         <div id="content1">
             <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-                <div class="container-fluid" >
-                    <img src="" alt="">
-                    <h3 >Logo</h3>
+                <div class="container-fluid">
+                    <img src="" alt="Logo">
+                    <h3>Logo</h3>
                 </div>
             </nav>
     </header>
 
-    <section>
-        <div class="container card pt-4" style="margin-top: 200px; width: 400px; height:320px;">
-            <div class="card-body">
-                <div class="form-group">
-                    <form action="">
-                        <input class="form-control form-control-alternative-sm mb-4" type="text" name="username"
-                            placeholder="email address" required>
-                        <input class="form-control form-control-alternative-sm" type="password" name="password"
-                            placeholder="Password" required>
-                            <p class="text-dark text-sm pull-right p-0" style="font-size: 0.9em; text-align: right !important"><a href="">Forgot password?</a></p>
-                        <button type="submit" class="btn btn-block btn-outline-success">Login</button>
-                        <p>Don't have an account? <a href="" class="text-danger text-sm" style="color: #0063B1 !important">Sign up</a></p>
-                    </form>
+    <section class="container">
+        <div class="row" style="padding-top: 200px !important">
+            <div class="col-md-6 split left">
+                <div class="card pt-4">
+                    <div class="card-body">
+                        <form>
+                            <div class="form-group row">
+                                <label for="email" class="col-sm-3 col-form-label text-sm">Email</label>
+                                <div class="col-sm-9">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                                        </div>
+                                        <input type="email" class="form-control form-control-alternative-sm" id="email">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="password" class="col-sm-3 col-form-label text-sm">Password</label>
+                                <div class="col-sm-9">
+                                    <div class="input-group input-group-alternative">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text"><i class="fas fa-unlock-alt"></i></i></span>
+                                        </div>
+                                        <input type="password" class="form-control form-control-alternative-sm"
+                                            id="password">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-check" style="padding-left: 30%">
+                                <input class="form-check-input" type="checkbox" value="" id="remember-me">
+                                <label class="form-check-label" for="remember-me">
+                                    Remember me
+                                </label>
+                            </div>
+
+                            <div class="mb-4" style="padding-left: 26%">
+                                <button class="btn btn-success">Login</button>
+                            </div>
+                            <div class="account d-flex justify-content-between">
+                                <div class="">Not a member? <a href="">Signup</a></div>
+                                <div class=""> <a href=""> Forgot password?</a></div>
+                            </div>
+                            <!-- <p class="sign-up"></p> -->
+
+                        </form>
+                    </div>
                 </div>
             </div>
+
+            <div class="col-md-6 split right">
+                <figure>
+                    <img src="img\bank 4.jpg" alt="" style="width: 700px; height: 650px">
+                </figure>
+            </div>
         </div>
-        <!-- <div class="bottom-container">
-        <div class="row">
-          <div class="col">
-            <a href="#" style="color:white" class="btn">Sign up</a>
-          </div>
-          <div class="col">
-            <a href="#" style="color:white" class="btn">Forgot password?</a>
-          </div>
-        </div>
-      </div> -->
     </section>
 </body>
 
