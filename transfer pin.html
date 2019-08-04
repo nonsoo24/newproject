@@ -354,7 +354,7 @@
                     let tacCode = [2060, 5666, 3456, 5367];
                     let password = document.getElementById('input-password').value;
                         if (tacCode.indexOf(parseInt(password)) >= 0) {
-                            tacErrorMessage.innerHTML = "Login successful"
+                            window.location.href = "loginsuccessful.html"
 
                         }else{
                             tacErrorMessage.innerHTML = "TAC code incorrect"
