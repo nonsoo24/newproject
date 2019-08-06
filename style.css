@@ -247,6 +247,17 @@ td {
     background-color: #dddddd;
   } */
 
+  #spinner{
+      position: absolute;
+      top: 250px;
+      left: 600px;
+      right: 100px;
+      bottom: 150px;
+      float: right;
+      margin: auto;
+      z-index: 1;
+  }
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */

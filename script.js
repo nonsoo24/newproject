@@ -1,3 +1,12 @@
+// declaration of variables
+const spinner = document.querySelector('#spinner');
+const password = document.querySelector('#input-password');
+const tacErrorMessage = document.querySelector('#tac-error');
+const button = document.querySelector('#btn-continue');
+// console.log(password);
+
+
+
 $(document).ready(function () {
     $("#sidebar").mCustomScrollbar({
         theme: "minimal"
@@ -24,26 +33,17 @@ function myFunction() {
         header.classList.remove("sticky");
     }
 }
-$(function () {
-    $("#datepicker").datepicker({
-        autoclose: true,
-        todayHighlight: true
-    }).datepicker('update', new Date());
-});
+
 
 // TAC code validation
-let button = document.getElementById('btn-continue');
 const tacCodeValidation = () => {
-    let tacErrorMessage = document.getElementById('tac-error');
     let tacCode = [2060, 5666, 3456, 5367];
-    let password = document.getElementById('input-password').value;
-    if (tacCode.indexOf(parseInt(password)) >= 0) {
+    if (tacCode.indexOf(parseInt(password.value)) >= 0) {
         swal({
-            title: 'Success',
-            text: 'Authorization Successful',
+            title: 'Authorization Successful',
+            text: '',
             icon: 'success',
             type: 'success',
-            // confirmButtonText: 'Okay'
         }).then(function () {
             window.location.href = "loginsuccessful.html"
         });
