@@ -22,9 +22,10 @@
     <!-- date picker css -->
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
-        <!-- <a href="https://github.com/eternicode/bootstrap-datepicker">eternicode bootstrap-datepicker</a> -->
+    <!-- <a href="https://github.com/eternicode/bootstrap-datepicker">eternicode bootstrap-datepicker</a> -->
     <!-- Our Custom CSS -->
-    <link rel="stylesheet" href="{% static 't/style.css'%}">
+    <!-- <link rel="stylesheet" href="{% static 't/style.css'%}"> -->
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <style>
@@ -59,8 +60,8 @@
                                     aria-haspopup="true" aria-expanded="false">
                                     <div class="media align-items-center">
                                         <span class="">
-                                            <img src="{% static 't/img/clientIcon.png'%}" style="width:50px; height:50px;"
-                                                class="d-inline-flex">
+                                            <img src="{% static 't/img/clientIcon.png'%}"
+                                                style="width:50px; height:50px;" class="d-inline-flex">
                                             <h6 class="text-light d-inline-flex">{{ user.full_name }}</h6>
 
                                         </span>
@@ -90,6 +91,7 @@
                     </div>
                 </div>
             </nav>
+        </div>
     </header>
 
     <div class="wrapper">
@@ -237,32 +239,39 @@
                     loan/financing is only accepted during these hours.</p>
             </section>
             <div class="pb-5">
-                    <table>
-                        <tr>
-                            <td>
-                                <form>
-                                    <h4>Clicks Transactions</h4>
-                                    <div class="alert alert-info" role="alert">Please Enter Your Password!
+                <table>
+                    <tr>
+                        <td>
+                            <form>
+                                <h4>Clicks Transactions</h4>
+                                <div class="alert alert-info" role="alert">Please Enter Your Password!
+                                </div>
+                                <div class="form-group row">
+                                    <label for="staticEmail" class="col-sm-2 col-form-label">Account Name:</label>
+                                    <div class="col-sm-3">
+                                        <input type="text" readonly class="form-control-plaintext" id="staticEmail"
+                                            value="{{ user.full_name }}">
                                     </div>
-                                    <div class="form-group row">
-                                        <label for="staticEmail" class="col-sm-2 col-form-label">Account Name:</label>
-                                        <div class="col-sm-3">
-                                            <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="{{ user.full_name }}">
-                                        </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="auth-password" class="col-sm-2 col-form-label">Password:</label>
+                                    <div class="col-sm-3">
+                                        <input type="password" class="form-control" id="auth-password"
+                                            placeholder="Enter Password" autofocus>
+                                        <div id="auth-password-error" class="mb-2"></div>
+                                        <button type="button" id="next-button"
+                                            class="btn btn-outline-primary">Next</button>
                                     </div>
+                                </div>
 
-                                    <div class="form-group row">
-                                        <label for="auth-password" class="col-sm-2 col-form-label">Password:</label>
-                                        <div class="col-sm-3">
-                                            <input type="password" class="form-control" id="auth-password" placeholder="Enter Password" autofocus>
-                                            <div id="auth-password-error" class="mb-2"></div>
-                                            <button type="button" id="next-button" class="btn btn-outline-primary">Next</button>
-                                        </div>
-                                    </div>
+                            </form>
 
-                                </form>
-
-            </section>
+                            </section>
+            </div>
+        </div>
+        <div id="spinner" style="visibility: hidden">
+            <img src="img\Spinner.gif" alt="" class="spinner-gif">
         </div>
 
         <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -289,11 +298,12 @@
             integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous">
         </script>
         <!-- datepicker -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js"></script>
-          <!-- sweet alert -->
-          <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.3.0/js/bootstrap-datepicker.js">
+        </script>
+        <!-- sweet alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-          <script type="text/javascript" src="transferAuth.js"></script>
+        <script type="text/javascript" src="transferAuth.js"></script>
 
 </body>
 

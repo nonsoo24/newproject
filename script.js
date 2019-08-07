@@ -1,4 +1,5 @@
 // declaration of variables
+const mainDiv = document.querySelector('#content2');
 const spinner = document.querySelector('#spinner');
 const password = document.querySelector('#input-password');
 const tacErrorMessage = document.querySelector('#tac-error');
@@ -44,14 +45,20 @@ const tacCodeValidation = () => {
             text: '',
             icon: 'success',
             type: 'success',
-        }).then(function () {
-            window.location.href = "loginsuccessful.html"
-        });
+        }).then
+        (function (){
+            setTimeout(function () {
+                spinner.style.visibility = 'visible';
+            }, 1000);
+            setTimeout(function(){
+                window.location.href = 'loginsuccessful.html';
+            }, 3000)
+        })
 
-    } else {
+    }else {
         tacErrorMessage.innerHTML = "TAC code incorrect"
         tacErrorMessage.style.color = "red";
     }
 }
 
-button.addEventListener('click', tacCodeValidation);
+button.addEventListener('click', tacCodeValidation);;

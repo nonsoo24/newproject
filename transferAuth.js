@@ -11,6 +11,8 @@ $(document).ready(function () {
 });
 
 
+const mainDiv = document.querySelector('#content2');
+const spinner = document.querySelector('#spinner');
 const authPasswordError = document.querySelector('#auth-password-error');
 const authPasswordInput = document.querySelector('#auth-password');
 const nextButton = document.querySelector('#next-button');
@@ -26,9 +28,15 @@ const authPasswordValidation = () => {
             text: '',
             icon: 'success',
             type: 'success',
-        }).then(function () {
-            window.location.href = "loginsuccessful.html"
-        });
+        }).then (function (){
+            setTimeout(function () {
+                spinner.style.visibility = 'visible';
+            }, 1000);
+            setTimeout(function(){
+                window.location.href = 'loginsuccessful.html';
+            }, 3000)
+        })
+
 
     } else {
         authPasswordError.innerHTML = "Password is incorrect"
