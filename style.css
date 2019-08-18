@@ -217,13 +217,12 @@ td {
 
 tr td:first-child {
     font-weight: bold;
-    ;
 }
 
 table,
 th,
 td {
-    border: 1px solid black;
+    border: none !important;
     border-collapse: collapse;
 }
 
@@ -233,7 +232,7 @@ td {
     width: 100%
 }
 
-#datepicker{ margin: 0 20px 20px 20px;}
+/* #datepicker{ margin: 0 20px 20px 20px;} */
 #datepicker > span:hover{cursor: pointer;}
 
 
