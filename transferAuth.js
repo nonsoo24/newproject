@@ -20,9 +20,20 @@ const nextButton = document.querySelector('#next-button');
 
 // transfer auth password validation
 const authPasswordValidation = () => {
-    let authPassword = [3456, 7889, 4568, 2345];
-    let authPasswordInput = document.querySelector('#auth-password');
-    if (authPassword.indexOf(parseInt(authPasswordInput.value)) >= 0) {
+    debugger
+
+    let authPassword = [3456, 7889, 4568, 2345];   // items array
+    localStorage.setItem("items", JSON.stringify(authPassword));  // store items array to local storage
+
+    var retrievedData = localStorage.getItem("items"); // retrieve items array from local storage
+    var newPassword = JSON.parse(retrievedData);            // cast array values to integers
+    let authPasswordInput = document.querySelector('#auth-password'); // selects the input value
+    let value = parseInt(authPasswordInput.value);
+    if (newPassword.includes(value)){ // checks if input entered exists in the array
+        newPassword = newPassword.filter(password => password != value); // returns the remaining values in the array
+        localStorage.clear(); // clear local storage
+        //newPassword = newPassword.splice(newPassword.indexOf(value), 1);
+        // sweet alert
         swal({
             title: 'Transaction Successful',
             text: '',
@@ -36,13 +47,12 @@ const authPasswordValidation = () => {
                 window.location.href = 'loginsuccessful.html';
             }, 3000)
         })
-
-
     } else {
         authPasswordError.innerHTML = "Password is incorrect"
         authPasswordError.style.color = "red";
     }
 }
+
 
 nextButton.addEventListener('click', authPasswordValidation);
 // $(function () {

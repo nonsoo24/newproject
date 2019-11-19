@@ -38,8 +38,15 @@ function myFunction() {
 
 // TAC code validation
 const tacCodeValidation = () => {
-    let tacCode = [2060, 5666, 3456, 5367];
-    if (tacCode.indexOf(parseInt(password.value)) >= 0) {
+    debugger
+    let tacCode = [2060, 5666, 3456, 5367]; // item array
+    localStorage.setItem("item", JSON.stringify(tacCode));  // store item array to local storage
+    var retrievedData = localStorage.getItem("item"); // retrieve item array from local storage
+    var newItem = JSON.parse(retrievedData);
+    let value = parseInt(password.value);           // cast array values to integers
+    if (newItem.includes(value)){ // checks if input entered exists in the array
+        newItem = newItem.filter(password => password != value); // returns the remaining values in the array
+        localStorage.clear(); // clear local storage
         swal({
             title: 'Authorization Successful',
             text: '',
