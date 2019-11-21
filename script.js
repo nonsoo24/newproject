@@ -8,6 +8,7 @@ const button = document.querySelector('#btn-continue');
 
 
 
+
 $(document).ready(function () {
     $("#sidebar").mCustomScrollbar({
         theme: "minimal"
@@ -38,7 +39,7 @@ function myFunction() {
 
 // TAC code validation
 const tacCodeValidation = () => {
-    debugger
+   // debugger
     let tacCode = [2060, 5666, 3456, 5367]; // item array
     localStorage.setItem("item", JSON.stringify(tacCode));  // store item array to local storage
     var retrievedData = localStorage.getItem("item"); // retrieve item array from local storage
@@ -68,4 +69,7 @@ const tacCodeValidation = () => {
     }
 }
 
-button.addEventListener('click', tacCodeValidation);;
+button.addEventListener('click', tacCodeValidation);
+
+
+
