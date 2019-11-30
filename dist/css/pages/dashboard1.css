@@ -96,3 +96,7 @@ tr td:last-child {
 .transfer-info, p{
   font-family: 'Open Sans', sans-serif;
 }
+
+.profile-picture{
+  width: 40%;
+}
