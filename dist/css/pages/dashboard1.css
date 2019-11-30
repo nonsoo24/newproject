@@ -45,7 +45,7 @@ tr td:last-child {
     width: 40%;
 }
 
-table {
+#form > table {
     width: 80%;
     align-content: center;
     margin-left: 100px;
