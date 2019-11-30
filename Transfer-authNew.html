@@ -23,6 +23,9 @@
     <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
 
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lato|Open+Sans&display=swap" rel="stylesheet">
+
     <!-- custom CSS -->
     <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -354,13 +357,13 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Transfer Funds</h4>
+                        <h4 class="text-themecolor">My Dashboard</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Transfer Funds </li>
+                                <li class="breadcrumb-item active">My Dashboard </li>
                             </ol>
                             <!-- <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button> -->
                         </div>
@@ -370,17 +373,17 @@
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
                 <div id="content2">
-                    <!-- <div class="secure text-right">
-                        <h6 class="p-1 banner" id="banner-message">You are in a secured site</h6>
-                    </div> -->
+                    <div class="secure text-right">
+                        <h6 class="text-white p-1 banner" id="banner-message">You are in a secured site</h6>
+                    </div>
                     <div class="d-flex container">
                         <h4 class="title text-danger">Personal Banking</h4>
                     </div>
-
+        
                     <section class="container">
                         <div class="d-flex pt-5">
                             <div class="transfer-image">
-                                <img src="img\picture.jpg" alt="" style="width: 250px; height: 250px">
+                                <img src="{% static 't/img/picture.jpg'%}" alt style="width: 250px; height: 250px">
                             </div>
                             <div class="transfer-info p-4 justify-content-center">
                                 <h4>Transfer <span class="text-danger">Funds</span></h4>
@@ -395,305 +398,38 @@
                         <p class="pt-3">Our loan/financing system is available from 7.00am to 8.00pm daily. Payment to
                             loan/financing is only accepted during these hours.</p>
                     </section>
+                    <div class="pb-5">
+                        <table>
+                            <tr>
+                                <td>
+                                    <form>
+                                        <h4>Clicks Transactions</h4>
+                                        <div class="alert alert-info" role="alert">Please Enter Your Password!
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="staticEmail">Account Name:</label>
+                                            <div class="col-sm-3">
+                                                <input class="form-control-plaintext" id="staticEmail" type="text" readonly value="{{ user.full_name }}">
+                                            </div>
+                                        </div>
         
-                    <section class="container">
-                        <div class="pt-3">
-                            <p class="text-uppercase"> Fund Transfer from Account Number </p>
-                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="auth-password">Password:</label>
+                                            <div class="col-sm-3">
+                                                <input class="form-control" id="auth-password" type="password" placeholder="Enter Password" autofocus>
+                                                <div class="mb-2" id="auth-password-error"></div>
+                                                <button class="btn btn-outline-primary" id="next-button" type="button">Next</button>
+                                            </div>
+                                        </div>
         
-                        <div class="pb-5">
-                            <form id="form">
-                                <table>
-                                    <tr>
-                                        <td>Destination Bank Name: </td>
-                                        <td>
-                                            <input id="bank-name" class="form-control form-control-sm" type="text">
-                                            <p id="bankNameError" class="pb-0 mb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Account Number:</td>
-                                        <td>
-                                            <input id="bank-account-number" class="form-control form-control-sm" type="number">
-                                            <p id="destinationNumberError" class="pb-0 mb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Address:</td>
-                                        <td>
-                                            <input id="bank-address" class="form-control form-control-sm" type="text">
-                                            <p id="bankAddressError" class="pb-0 mb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Country:</td>
-                                        <td>
-                                            <select class="form-control form-control-sm">
-                                                <option>Choose country</option>
-                                                <option value="">Afghanistan</option>
-                                                <option value="">Albania</option>
-                                                <option value="">Algeria</option>
-                                                <option value="">Andorra</option>
-                                                <option value="">Angola</option>
-                                                <option value="">Antigua and Barbuda</option>
-                                                <option value="">Argentina</option>
-                                                <option value="">Armenia</option>
-                                                <option value="">Australia</option>
-                                                <option value="">Austria</option>
-                                                <option value="">Azerbaijan</option>
-                                                <option value="">The Bahamas</option>
-                                                <option value="">Bahrain</option>
-                                                <option value="">Bangladesh</option>
-                                                <option value="">Barbados</option>
-                                                <option value="">Belarus</option>
-                                                <option value="">Belgium</option>
-                                                <option value="">Belize</option>
-                                                <option value="">Benin</option>
-                                                <option value="">Bhutan</option>
-                                                <option value="">Bolivia</option>
-                                                <option value="">Bosnia and Herzegovina</option>
-                                                <option value="">Botswana</option>
-                                                <option value="">Brazil</option>
-                                                <option value="">Brunei</option>
-                                                <option value="">Bulgaria</option>
-                                                <option value="">Burkina Faso</option>
-                                                <option value="">Burundi</option>
-                                                <option value="">Cabo Verde</option>
-                                                <option value="">Cambodia</option>
-                                                <option value="">Cameroon</option>
-                                                <option value="">Canada</option>
-                                                <option value="">Central African Republic</option>
-                                                <option value="">Chad</option>
-                                                <option value="">Chile</option>
-                                                <option value="">China</option>
-                                                <option value="">Colombia</option>
-                                                <option value="">Comoros</option>
-                                                <option value="">Congo, Democratic Republic of the</option>
-                                                <option value="">Congo, Republic of the</option>
-                                                <option value="">Costa Rica</option>
-                                                <option value="">Côte d’Ivoire</option>
-                                                <option value="">Croatia</option>
-                                                <option value="">Cuba</option>
-                                                <option value="">Cyprus</option>
-                                                <option value="">Czech Republic</option>
-                                                <option value="">Denmark</option>
-                                                <option value="">Djibouti</option>
-                                                <option value="">Dominica</option>
-                                                <option value="">Dominican Republic</option>
-                                                <option value="">East Timor (Timor-Leste)</option>
-                                                <option value="">Ecuador</option>
-                                                <option value="">Egypt</option>
-                                                <option value="">El Salvador</option>
-                                                <option value="">Equatorial Guinea</option>
-                                                <option value="">Eritrea</option>
-                                                <option value="">Estonia</option>
-                                                <option value="">Eswatini</option>
-                                                <option value="">Ethiopia</option>
-                                                <option value="">Fiji</option>
-                                                <option value="">Finland</option>
-                                                <option value="">France</option>
-                                                <option value="">Gabon</option>
-                                                <option value="">The Gambia</option>
-                                                <option value="">Georgia</option>
-                                                <option value="">Germany</option>
-                                                <option value="">Ghana</option>
-                                                <option value="">Greece</option>
-                                                <option value="">Grenada</option>
-                                                <option value="">Guatemala</option>
-                                                <option value="">Guinea</option>
-                                                <option value="">Guinea-Bissau</option>
-                                                <option value="">Guyana</option>
-                                                <option value="">Haiti</option>
-                                                <option value="">Honduras</option>
-                                                <option value="">Hungary</option>
-                                                <option value="">Iceland</option>
-                                                <option value="">India</option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Iran</option>
-                                                <option value="">Iraq</option>
-                                                <option value="">Ireland</option>
-                                                <option value="">Israel</option>
-                                                <option value="">Italy</option>
-                                                <option value="">Jamaica</option>
-                                                <option value="">Japan</option>
-                                                <option value="">Jordan</option>
-                                                <option value="">Kazakhstan</option>
-                                                <option value="">Kenya</option>
-                                                <option value="">Kiribati</option>
-                                                <option value="">Korea, North</option>
-                                                <option value="">Korea, South</option>
-                                                <option value="">Kosovo</option>
-                                                <option value="">Kuwait</option>
-                                                <option value="">Kyrgyzstan</option>
-                                                <option value="">Laos</option>
-                                                <option value="">Latvia</option>
-                                                <option value="">Lebanon</option>
-                                                <option value="">Lesotho</option>
-                                                <option value="">Liberia</option>
-                                                <option value="">Libya</option>
-                                                <option value="">Liechtenstein</option>
-                                                <option value="">Lithuania</option>
-                                                <option value="">Luxembourg</option>
-                                                <option value="">Madagascar</option>
-                                                <option value="">Malawi</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Maldives</option>
-                                                <option value="">Mali</option>
-                                                <option value="">Malta</option>
-                                                <option value="">Marshall Islands</option>
-                                                <option value="">Mauritania</option>
-                                                <option value="">Mauritius</option>
-                                                <option value="">Mexico</option>
-                                                <option value="">Micronesia, Federated States of</option>
-                                                <option value="">Moldova</option>
-                                                <option value="">Monaco</option>
-                                                <option value="">Mongolia</option>
-                                                <option value="">Montenegro</option>
-                                                <option value="">Morocco</option>
-                                                <option value="">Mozambique</option>
-                                                <option value="">Myanmar (Burma)</option>
-                                                <option value="">Namibia</option>
-                                                <option value="">Nauru</option>
-                                                <option value="">Nepal</option>
-                                                <option value="">Netherlands</option>
-                                                <option value="">New Zealand</option>
-                                                <option value="">Nicaragua</option>
-                                                <option value="">Niger</option>
-                                                <option value="">Nigeria</option>
-                                                <option value="">North Macedonia</option>
-                                                <option value="">Norway</option>
-                                                <option value="">Oman</option>
-                                                <option value="">Pakistan</option>
-                                                <option value="">Palau</option>
-                                                <option value="">Panama</option>
-                                                <option value="">Papua New Guinea</option>
-                                                <option value="">Paraguay</option>
-                                                <option value="">Peru</option>
-                                                <option value="">Philippines</option>
-                                                <option value="">Poland</option>
-                                                <option value="">Portugal</option>
-                                                <option value="">Qatar</option>
-                                                <option value="">Romania</option>
-                                                <option value="">Russia</option>
-                                                <option value="">Rwanda</option>
-                                                <option value="">Saint Kitts and Nevis</option>
-                                                <option value="">Saint Lucia</option>
-                                                <option value="">Saint Vincent and the Grenadines</option>
-                                                <option value="">Samoa</option>
-                                                <option value="">San Marino</option>
-                                                <option value="">Sao Tome and Principe</option>
-                                                <option value="">Saudi Arabia</option>
-                                                <option value="">Senegal</option>
-                                                <option value="">Serbia</option>
-                                                <option value="">Seychelles</option>
-                                                <option value="">Sierra Leone</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Slovakia</option>
-                                                <option value="">Slovenia</option>
-                                                <option value="">Solomon Islands</option>
-                                                <option value="">Somalia</option>
-                                                <option value="">South Africa</option>
-                                                <option value="">Spain</option>
-                                                <option value="">Sri Lanka</option>
-                                                <option value="">Sudan</option>
-                                                <option value="">Sudan, South</option>
-                                                <option value="">Suriname</option>
-                                                <option value="">Sweden</option>
-                                                <option value="">Switzerland</option>
-                                                <option value="">Syria</option>
-                                                <option value="">Taiwan</option>
-                                                <option value="">Tajikistan</option>
-                                                <option value="">Tanzania</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Togo</option>
-                                                <option value="">Tonga</option>
-                                                <option value="">Trinidad and Tobago</option>
-                                                <option value="">Tunisia</option>
-                                                <option value="">Turkey</option>
-                                                <option value="">Turkmenistan</option>
-                                                <option value="">Tuvalu</option>
-                                                <option value="">Uganda</option>
-                                                <option value="">Ukraine</option>
-                                                <option value="">United Arab Emirates</option>
-                                                <option value="">United Kingdom</option>
-                                                <option value="">United States</option>
-                                                <option value="">Uruguay</option>
-                                                <option value="">Uzbekistan</option>
-                                                <option value="">Vanuatu</option>
-                                                <option value="">Vatican City</option>
-                                                <option value="">Venezuela</option>
-                                                <option value="">Vietnam</option>
-                                                <option value="">Yemen</option>
-                                                <option value="">Zambia</option>
-                                                <option value="">Zimbabwe</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Routing Number:**</td>
-                                        <td><input class="form-control form-control-sm" type="number" ></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Swift Code:** </td>
-                                        <td><input class="form-control form-control-sm" type="number"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Sort Code:** </td>
-                                        <td><input class="form-control form-control-sm" type="number"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Iban No: </td>
-                                        <td><input class="form-control form-control-sm" type="number"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Account Name: </td>
-                                        <td>
-                                            <input id="dest-account-name" class="form-control form-control-sm" type="text">
-                                            <p id="destinationNameError" class="mb-0 pb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Transaction Date: </td>
-                                        <td>
-                                            <input id="datepicker" class="form-control form-control-sm"
-                                                data-date-format="mm-dd-yyyy" type="text" />
-                                        </td>
-                                    </tr>
+                                    </form>
         
-                                    <tr>
-                                        <td>Currency: </td>
-                                        <td> <select class="form-control form-control-sm">
-                                                <option>USD</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Amount (USD): </td>
-                                        <td><input class="form-control form-control-sm" type="number" min="0.01" step="0.01"
-                                                max="2500"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Further Transaction: </td>
-                                        <td><input class="form-control form-control-sm d-inline-flex d-none" type="text">
-                                            <span class="d-inline-flex">(Optional)</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Account Balance (USD): </td>
-                                        <td><input class="form-control form-control-sm" type="text"></td>
-                                    </tr>
         
-                                </table>
-                                <div class="text-center">
-                                    <button type="submit" id="submit-button" class="btn btn-outline-dark btn-lg mt-2"
-                                        style="border: 1px solid #0063B1">Transfer fund</button>
-                                </div>
-                                <!-- <input id="datepicker" class="form-control form-control-sm" data-date-format="mm-dd-yyyy" type="text" /> -->
-                            </form>
-        
-                        </div>
-                    </section>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
-
 
 
 
@@ -811,9 +547,11 @@
     <script src="dist/js/dashboard1.js"></script>
     <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
 
+            <!-- sweet alert -->
+            <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- custom Js -->
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="validation.js"></script>
+    <script src="transferAuth.js" type="text/javascript"></script>
 </body>
 
 </html>

@@ -34,19 +34,65 @@
   margin-left: 75px; }
 
 .dash-timeline:before {
-  left: 30px; }
+  left: 30px;
+font-family: 'Open Sans', sans-serif;
+}
 
 
   tr td:first-child {
     width: 30%;
+    font-family: 'Open Sans', sans-serif;
+}
+tr > td{
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 600;
+  padding: 0.6em;
 }
 
 tr td:last-child {
     width: 40%;
+    font-family: 'Open Sans', sans-serif;
 }
 
 #form > table {
     width: 80%;
     align-content: center;
     margin-left: 100px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.btn-outline-dark:hover {
+  background-color: #0063B1 !important;
+  border: 1px solid #0063B1;
+  font-family: 'Open Sans', sans-serif;
+}
+
+/* .secure {
+  background-color: #BDD8E5;
+} */
+
+.banner {
+  color: #4B4B4B !important;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.account-summary-info {
+  font-size: 15px;
+  color: #000;
+  padding: 0px 0px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+
+#content1,
+#content2.active {
+    width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.title {
+    font-family: 'Lato', sans-serif;
+}
+.transfer-info, p{
+  font-family: 'Open Sans', sans-serif;
 }

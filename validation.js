@@ -72,6 +72,7 @@ submitButton = (e) => {
     bankAddressValidation()
     bankAccountNumberValidation()
     destinationAccountNameValidation()
+    window.location.href = 'Transfer-authNew.html';
     e.preventDefault();
 
     return true;
