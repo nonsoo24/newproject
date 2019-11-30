@@ -22,15 +22,88 @@
     <!-- Dashboard 1 Page CSS -->
     <link href="dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
     <link href="dist/css/pages/dashboard1.css" rel="stylesheet">
-
-    <!-- custom CSS -->
-    <!-- <link rel="stylesheet" href="style.css"> -->
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<style>
+    .my-account {
+        padding-top: 100px;
+    }
+
+    button {
+        background: #F26132 !important;
+        box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 4px;
+        font-family: 'Poppins', sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        text-align: center;
+        color: #FFFFFF !important;
+        padding: 15px;
+    }
+
+    button:hover {
+        background: #fff !important;
+        border: 2px solid #F26132;
+        color: #000 !important;
+    }
+
+    h5,
+    h6 {
+        font-family: Poppins;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 21px;
+        text-align: left;
+
+        color: #333333;
+    }
+
+    .profile-card {
+        margin: 40px auto auto auto
+}
+#profile-picture{
+    width: 60%;
+        margin: 40px auto auto auto
+}
+label{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    /* line-height: 24px; */
+    text-align: left !important;
+    color: #000;
+    display: block;
+    margin: 0px 0px 1px 2px;
+}
+
+label[for='last-name'], label[for='phone-number']{
+    margin-top: 25px
+}
+
+.card-title{
+    background: #FFFFFF;
+border: 1px solid #BEBEBE !important;
+box-sizing: border-box;
+}
+
+	.fa-plus{
+        margin: 7px 4px 0px 0px;
+        cursor: pointer;
+
+    }
+
+    .fa-pencil-alt{
+        cursor: pointer
+    }
+</style>
 </head>
 
 <body class="wp-menu skin-blue-dark fixed-layout">
@@ -311,7 +384,7 @@
                         <!-- <li class="nav-small-cap">--- PERSONAL</li> -->
                         <li> <a class="waves-effect waves-dark" href="new.html" aria-expanded="false"><i class="icon-speedometer"></i><span class="hide-menu">Dashboard</a>
                         </li>
-                        <li> <a class="waves-effect waves-dark" href="acount-enquiry.html" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">Account Enquiry</span></a>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="ti-layout-grid2"></i><span class="hide-menu">Account Enquiry</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="transfer-new.html" aria-expanded="false"><i class="ti-email"></i><span class="hide-menu">Transfer Funds</span></a>
                         </li>
@@ -354,13 +427,13 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 align-self-center">
-                        <h4 class="text-themecolor">Transfer Funds</h4>
+                        <h4 class="text-themecolor">My Profile</h4>
                     </div>
                     <div class="col-md-7 align-self-center text-right">
                         <div class="d-flex justify-content-end align-items-center">
                             <ol class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                                <li class="breadcrumb-item active">Transfer Funds </li>
+                                <li class="breadcrumb-item active">My Profile </li>
                             </ol>
                             <!-- <button type="button" class="btn btn-info d-none d-lg-block m-l-15"><i class="fa fa-plus-circle"></i> Create New</button> -->
                         </div>
@@ -369,345 +442,87 @@
                 <!-- ============================================================== -->
                 <!-- End Bread crumb and right sidebar toggle -->
                 <!-- ============================================================== -->
-                <div id="content2">
-                    <!-- <div class="secure text-right">
-                        <h6 class="p-1 banner" id="banner-message">You are in a secured site</h6>
-                    </div> -->
-                    <div class="d-flex container">
-                        <h4 class="title text-danger">Personal Banking</h4>
-                    </div>
-
-                    <section class="container">
-                        <div class="d-flex pt-5">
-                            <div class="transfer-image">
-                                <img src="img\picture.jpg" alt="" style="width: 250px; height: 250px">
-                            </div>
-                            <div class="transfer-info p-4 justify-content-center">
-                                <h4>Transfer <span class="text-danger">Funds</span></h4>
-                                <p>You can transfer any available amount to your own EpicEuro Bank Accounts or other Accounts in
-                                    other banks anywhere in the world.</p>
-                                <p class="text-sm">For security reasons, the bank will limit your transfer to third party
-                                    accounts within
-                                    Stacord Bank at $5,000.00 and other Banks at $50,000.00 per day. For Non-Resident Account,
-                                    there is no limit to the amount you can transfer.</p>
-                            </div>
-                        </div>
-                        <p class="pt-3">Our loan/financing system is available from 7.00am to 8.00pm daily. Payment to
-                            loan/financing is only accepted during these hours.</p>
-                    </section>
+                <section class="container">
+                    <div class="row my-account">
+                        <div class="col-md-3">
+                            <div class="card card-profile shadow" style="width: 18rem;">
+                                <img class="img-fluid profile-card" src="../../../img/customer1.png" alt="profile-picture">
+                                <h5 class="text-center">Ifeoluwasimi olusola</h5>
+                                <div class="card-body">
+                                    <button class="btn px-4 rounded" @click="hire">Hire a Worker</button>
+                                    <hr>
         
-                    <section class="container">
-                        <div class="pt-3">
-                            <p class="text-uppercase"> Fund Transfer from Account Number </p>
-                        </div>
+                                    <h5 class="mt-2">Contact Information</h5>
         
-                        <div class="pb-5">
-                            <form id="form">
-                                <table>
-                                    <tr>
-                                        <td>Destination Bank Name: </td>
-                                        <td>
-                                            <input id="bank-name" class="form-control form-control-sm" type="text">
-                                            <p id="bankNameError" class="pb-0 mb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Account Number:</td>
-                                        <td>
-                                            <input id="bank-account-number" class="form-control form-control-sm" type="number">
-                                            <p id="destinationNumberError" class="pb-0 mb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Address:</td>
-                                        <td>
-                                            <input id="bank-address" class="form-control form-control-sm" type="text">
-                                            <p id="bankAddressError" class="pb-0 mb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Country:</td>
-                                        <td>
-                                            <select class="form-control form-control-sm">
-                                                <option>Choose country</option>
-                                                <option value="">Afghanistan</option>
-                                                <option value="">Albania</option>
-                                                <option value="">Algeria</option>
-                                                <option value="">Andorra</option>
-                                                <option value="">Angola</option>
-                                                <option value="">Antigua and Barbuda</option>
-                                                <option value="">Argentina</option>
-                                                <option value="">Armenia</option>
-                                                <option value="">Australia</option>
-                                                <option value="">Austria</option>
-                                                <option value="">Azerbaijan</option>
-                                                <option value="">The Bahamas</option>
-                                                <option value="">Bahrain</option>
-                                                <option value="">Bangladesh</option>
-                                                <option value="">Barbados</option>
-                                                <option value="">Belarus</option>
-                                                <option value="">Belgium</option>
-                                                <option value="">Belize</option>
-                                                <option value="">Benin</option>
-                                                <option value="">Bhutan</option>
-                                                <option value="">Bolivia</option>
-                                                <option value="">Bosnia and Herzegovina</option>
-                                                <option value="">Botswana</option>
-                                                <option value="">Brazil</option>
-                                                <option value="">Brunei</option>
-                                                <option value="">Bulgaria</option>
-                                                <option value="">Burkina Faso</option>
-                                                <option value="">Burundi</option>
-                                                <option value="">Cabo Verde</option>
-                                                <option value="">Cambodia</option>
-                                                <option value="">Cameroon</option>
-                                                <option value="">Canada</option>
-                                                <option value="">Central African Republic</option>
-                                                <option value="">Chad</option>
-                                                <option value="">Chile</option>
-                                                <option value="">China</option>
-                                                <option value="">Colombia</option>
-                                                <option value="">Comoros</option>
-                                                <option value="">Congo, Democratic Republic of the</option>
-                                                <option value="">Congo, Republic of the</option>
-                                                <option value="">Costa Rica</option>
-                                                <option value="">Côte d’Ivoire</option>
-                                                <option value="">Croatia</option>
-                                                <option value="">Cuba</option>
-                                                <option value="">Cyprus</option>
-                                                <option value="">Czech Republic</option>
-                                                <option value="">Denmark</option>
-                                                <option value="">Djibouti</option>
-                                                <option value="">Dominica</option>
-                                                <option value="">Dominican Republic</option>
-                                                <option value="">East Timor (Timor-Leste)</option>
-                                                <option value="">Ecuador</option>
-                                                <option value="">Egypt</option>
-                                                <option value="">El Salvador</option>
-                                                <option value="">Equatorial Guinea</option>
-                                                <option value="">Eritrea</option>
-                                                <option value="">Estonia</option>
-                                                <option value="">Eswatini</option>
-                                                <option value="">Ethiopia</option>
-                                                <option value="">Fiji</option>
-                                                <option value="">Finland</option>
-                                                <option value="">France</option>
-                                                <option value="">Gabon</option>
-                                                <option value="">The Gambia</option>
-                                                <option value="">Georgia</option>
-                                                <option value="">Germany</option>
-                                                <option value="">Ghana</option>
-                                                <option value="">Greece</option>
-                                                <option value="">Grenada</option>
-                                                <option value="">Guatemala</option>
-                                                <option value="">Guinea</option>
-                                                <option value="">Guinea-Bissau</option>
-                                                <option value="">Guyana</option>
-                                                <option value="">Haiti</option>
-                                                <option value="">Honduras</option>
-                                                <option value="">Hungary</option>
-                                                <option value="">Iceland</option>
-                                                <option value="">India</option>
-                                                <option value="">Indonesia</option>
-                                                <option value="">Iran</option>
-                                                <option value="">Iraq</option>
-                                                <option value="">Ireland</option>
-                                                <option value="">Israel</option>
-                                                <option value="">Italy</option>
-                                                <option value="">Jamaica</option>
-                                                <option value="">Japan</option>
-                                                <option value="">Jordan</option>
-                                                <option value="">Kazakhstan</option>
-                                                <option value="">Kenya</option>
-                                                <option value="">Kiribati</option>
-                                                <option value="">Korea, North</option>
-                                                <option value="">Korea, South</option>
-                                                <option value="">Kosovo</option>
-                                                <option value="">Kuwait</option>
-                                                <option value="">Kyrgyzstan</option>
-                                                <option value="">Laos</option>
-                                                <option value="">Latvia</option>
-                                                <option value="">Lebanon</option>
-                                                <option value="">Lesotho</option>
-                                                <option value="">Liberia</option>
-                                                <option value="">Libya</option>
-                                                <option value="">Liechtenstein</option>
-                                                <option value="">Lithuania</option>
-                                                <option value="">Luxembourg</option>
-                                                <option value="">Madagascar</option>
-                                                <option value="">Malawi</option>
-                                                <option value="">Malaysia</option>
-                                                <option value="">Maldives</option>
-                                                <option value="">Mali</option>
-                                                <option value="">Malta</option>
-                                                <option value="">Marshall Islands</option>
-                                                <option value="">Mauritania</option>
-                                                <option value="">Mauritius</option>
-                                                <option value="">Mexico</option>
-                                                <option value="">Micronesia, Federated States of</option>
-                                                <option value="">Moldova</option>
-                                                <option value="">Monaco</option>
-                                                <option value="">Mongolia</option>
-                                                <option value="">Montenegro</option>
-                                                <option value="">Morocco</option>
-                                                <option value="">Mozambique</option>
-                                                <option value="">Myanmar (Burma)</option>
-                                                <option value="">Namibia</option>
-                                                <option value="">Nauru</option>
-                                                <option value="">Nepal</option>
-                                                <option value="">Netherlands</option>
-                                                <option value="">New Zealand</option>
-                                                <option value="">Nicaragua</option>
-                                                <option value="">Niger</option>
-                                                <option value="">Nigeria</option>
-                                                <option value="">North Macedonia</option>
-                                                <option value="">Norway</option>
-                                                <option value="">Oman</option>
-                                                <option value="">Pakistan</option>
-                                                <option value="">Palau</option>
-                                                <option value="">Panama</option>
-                                                <option value="">Papua New Guinea</option>
-                                                <option value="">Paraguay</option>
-                                                <option value="">Peru</option>
-                                                <option value="">Philippines</option>
-                                                <option value="">Poland</option>
-                                                <option value="">Portugal</option>
-                                                <option value="">Qatar</option>
-                                                <option value="">Romania</option>
-                                                <option value="">Russia</option>
-                                                <option value="">Rwanda</option>
-                                                <option value="">Saint Kitts and Nevis</option>
-                                                <option value="">Saint Lucia</option>
-                                                <option value="">Saint Vincent and the Grenadines</option>
-                                                <option value="">Samoa</option>
-                                                <option value="">San Marino</option>
-                                                <option value="">Sao Tome and Principe</option>
-                                                <option value="">Saudi Arabia</option>
-                                                <option value="">Senegal</option>
-                                                <option value="">Serbia</option>
-                                                <option value="">Seychelles</option>
-                                                <option value="">Sierra Leone</option>
-                                                <option value="">Singapore</option>
-                                                <option value="">Slovakia</option>
-                                                <option value="">Slovenia</option>
-                                                <option value="">Solomon Islands</option>
-                                                <option value="">Somalia</option>
-                                                <option value="">South Africa</option>
-                                                <option value="">Spain</option>
-                                                <option value="">Sri Lanka</option>
-                                                <option value="">Sudan</option>
-                                                <option value="">Sudan, South</option>
-                                                <option value="">Suriname</option>
-                                                <option value="">Sweden</option>
-                                                <option value="">Switzerland</option>
-                                                <option value="">Syria</option>
-                                                <option value="">Taiwan</option>
-                                                <option value="">Tajikistan</option>
-                                                <option value="">Tanzania</option>
-                                                <option value="">Thailand</option>
-                                                <option value="">Togo</option>
-                                                <option value="">Tonga</option>
-                                                <option value="">Trinidad and Tobago</option>
-                                                <option value="">Tunisia</option>
-                                                <option value="">Turkey</option>
-                                                <option value="">Turkmenistan</option>
-                                                <option value="">Tuvalu</option>
-                                                <option value="">Uganda</option>
-                                                <option value="">Ukraine</option>
-                                                <option value="">United Arab Emirates</option>
-                                                <option value="">United Kingdom</option>
-                                                <option value="">United States</option>
-                                                <option value="">Uruguay</option>
-                                                <option value="">Uzbekistan</option>
-                                                <option value="">Vanuatu</option>
-                                                <option value="">Vatican City</option>
-                                                <option value="">Venezuela</option>
-                                                <option value="">Vietnam</option>
-                                                <option value="">Yemen</option>
-                                                <option value="">Zambia</option>
-                                                <option value="">Zimbabwe</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Routing Number:**</td>
-                                        <td><input class="form-control form-control-sm" type="number" ></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Swift Code:** </td>
-                                        <td><input class="form-control form-control-sm" type="number"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Sort Code:** </td>
-                                        <td><input class="form-control form-control-sm" type="number"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Bank Iban No: </td>
-                                        <td><input class="form-control form-control-sm" type="number"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Destination Account Name: </td>
-                                        <td>
-                                            <input id="dest-account-name" class="form-control form-control-sm" type="text">
-                                            <p id="destinationNameError" class="mb-0 pb-0"></p>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Transaction Date: </td>
-                                        <td>
-                                            <input id="datepicker" class="form-control form-control-sm"
-                                                data-date-format="mm-dd-yyyy" type="text" />
-                                        </td>
-                                    </tr>
+                                    <div class="mt-4">
+                                        <h6 class="pb-0 mb-0">E-mail Address</h6>
+                                        <p class="text-left">o.Ifeoluwasimi@gmail.com</p>
+                                    </div>
         
-                                    <tr>
-                                        <td>Currency: </td>
-                                        <td> <select class="form-control form-control-sm">
-                                                <option>USD</option>
-                                            </select>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Amount (USD): </td>
-                                        <td><input class="form-control form-control-sm" type="number" min="0.01" step="0.01"
-                                                max="2500"></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Further Transaction: </td>
-                                        <td><input class="form-control form-control-sm d-inline-flex d-none" type="text">
-                                            <span class="d-inline-flex">(Optional)</span></td>
-                                    </tr>
-                                    <tr>
-                                        <td>Account Balance (USD): </td>
-                                        <td><input class="form-control form-control-sm" type="text"></td>
-                                    </tr>
+                                    <div>
+                                        <h6 class="pb-0 mb-0">Phone Number</h6>
+                                        <p class="text-left pb-4">08012345678</p>
+                                    </div>
         
-                                </table>
-                                <div class="text-center">
-                                    <button type="submit" id="submit-button" class="btn btn-outline-dark btn-lg mt-2"
-                                        style="border: 1px solid #0063B1">Transfer fund</button>
                                 </div>
-                                <!-- <input id="datepicker" class="form-control form-control-sm" data-date-format="mm-dd-yyyy" type="text" /> -->
-                            </form>
-        
+                            </div>
                         </div>
-                    </section>
-                </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+                        <div class="col-md-8 offset-1">
+                            <div class="card card-profile shadow">
+                                <div class="card-header d-flex justify-content-between">
+                                    <h5>My Profile</h5>
+                                    <span><i class="fas fa-pencil-alt"></i></span>
+                                </div>
+                                <div class="card-body">
+                                    <!-- <h5 class="card-title border border-dark p-2 mb-4">Profile</h5> -->
+                                    <div class="row">
+                                            <div class="col-md-3">
+                                                <figure>
+                                                    <img class="img-fluid mt-0" id="profile-picture" src="../../../img/customer1.png"
+                                                    alt="profile-picture">
+                                                </figure>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="first-name">First Name</label>
+                                                <input type="text" id="first-name" class="form-control">
+        
+                                                <label for="email" class="mt-4">Email Address</label>
+                                                <input type="email" id="email" class="form-control">
+                                            </div>
+        
+                                            <div class="col-md-4">
+                                                <label for="last-name" class="mt-0"> Last Name</label>
+                                                <input type="text" id="last-name" class="form-control">
+        
+                                                <label for="phone-number">Phone Number</label>
+                                                <input type="tel" id="phone-number" class="form-control">
+                                            </div>
+        
+                                    </div>
+        
+                                    <!-- <h5 class="card-title border border-dark p-2 mb-2 mt-4">Saved Addresses</h5> -->
+                                    <div class="row mt-5">
+                                        <div class="col-md-6">
+                                            <textarea class="form-control address" rows="5" cols="100" placeholder="Address"></textarea>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <textarea class="form-control address" rows="5" cols="100" placeholder="Address"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex mt-1">
+                                        <span><i class="fas fa-plus"></i></span>
+                                    <p>Add a new address</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                </section>
+                <!-- ============================================================== -->
+                <!-- End Page Content -->
+                <!-- ============================================================== -->
+                <!-- ============================================================== -->
                 <!-- Right sidebar -->
                 <!-- ============================================================== -->
                 <!-- .right-sidebar -->
@@ -730,33 +545,6 @@
                                 <li><a href="javascript:void(0)" data-skin="skin-blue-dark" class="blue-dark-theme working">10</a></li>
                                 <li><a href="javascript:void(0)" data-skin="skin-purple-dark" class="purple-dark-theme">11</a></li>
                                 <li><a href="javascript:void(0)" data-skin="skin-megna-dark" class="megna-dark-theme ">12</a></li>
-                            </ul>
-                            <ul class="m-t-20 chatonline">
-                                <li><b>Chat option</b></li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/1.jpg" alt="user-img" class="img-circle"> <span>Varun Dhavan <small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/2.jpg" alt="user-img" class="img-circle"> <span>Genelia Deshmukh <small class="text-warning">Away</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/3.jpg" alt="user-img" class="img-circle"> <span>Ritesh Deshmukh <small class="text-danger">Busy</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/4.jpg" alt="user-img" class="img-circle"> <span>Arijit Sinh <small class="text-muted">Offline</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/5.jpg" alt="user-img" class="img-circle"> <span>Govinda Star <small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/6.jpg" alt="user-img" class="img-circle"> <span>John Abraham<small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/7.jpg" alt="user-img" class="img-circle"> <span>Hritik Roshan<small class="text-success">online</small></span></a>
-                                </li>
-                                <li>
-                                    <a href="javascript:void(0)"><img src="assets/images/users/8.jpg" alt="user-img" class="img-circle"> <span>Pwandeep rajan <small class="text-success">online</small></span></a>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -810,10 +598,6 @@
     <!-- Chart JS -->
     <script src="dist/js/dashboard1.js"></script>
     <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
-
-    <!-- custom Js -->
-    <script type="text/javascript" src="script.js"></script>
-    <script type="text/javascript" src="validation.js"></script>
 </body>
 
 </html>
