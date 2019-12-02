@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Bank</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="../assets/node_modules/css-chart/css-chart.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="../dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="../dist/css/pages/dashboard1.css" rel="stylesheet">
+    <style>
+        .topbar .navbar-collapse {
+            background: #0063B1;
+        }
+
+            button {
+                background: #03A9F3 !important;
+                box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+                border-radius: 4px;
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 20px;
+                text-align: center !important;
+                color: #FFFFFF !important;
+                padding: 15px;
+            }
+    
+            button:hover {
+                background: #fff !important;
+                border: 2px solid #03A9F3;
+                color: #000 !important;
+            }
+    
+            .profile-picture {
+                width: 40%;
+            }
+    
+            h5,
+            h6 {
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 21px;
+                text-align: left;
+    
+                color: #333333;
+            }
+    
+            .profile-card {
+                margin: 40px auto auto auto
+            }
+    
+            #profile-picture {
+                width: 60%;
+                margin: 40px auto auto auto
+            }
+    
+            label {
+                font-family: 'Poppins', sans-serif;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 14px;
+                /* line-height: 24px; */
+                text-align: left !important;
+                color: #000;
+                display: block;
+                margin: 0px 0px 1px 2px;
+            }
+    
+            label[for='last-name'],
+            label[for='phone-number'] {
+                margin-top: 25px
+            }
+    
+            .card-title {
+                background: #FFFFFF;
+                border: 1px solid #BEBEBE !important;
+                box-sizing: border-box;
+            }
+    
+            .fa-plus {
+                margin: 7px 4px 0px 0px;
+                cursor: pointer;
+    
+            }
+    
+            .fa-pencil-alt {
+                cursor: pointer
+            }
+        </style>
+</head>
+
+<body class="wp-menu skin-blue-dark fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label"></p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a
+                                class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- mega menu -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img
+                                    src="../img/clientIcon.png" alt="profile-picture" class="profile-picture">
+                            </a>
+                            <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown"
+                                aria-labelledby="2">
+                                <ul>
+
+                                    <div class="message-center">
+                                        <!-- Message -->
+                                        <a href="profile.html">
+                                            <div class="mail-contnet">
+                                                <h5>My profile</h5>
+                                            </div>
+                                        </a>
+                                        <!-- Message -->
+                                        <a href="javascript:void(0)">
+                                            <div class="mail-contnet">
+                                                <h5>Log out</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- User Profile-->
+
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- <li class="nav-small-cap">--- PERSONAL</li> -->
+                        <li> <a class="waves-effect waves-dark" href="new.html" aria-expanded="false"><i
+                                    class="icon-speedometer"></i><span class="hide-menu">Dashboard</a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="account-enquiry.html" aria-expanded="false"><i
+                                    class="ti-layout-grid2"></i><span class="hide-menu">Account Enquiry</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="transfer-new.html" aria-expanded="false"><i
+                                    class="ti-email"></i><span class="hide-menu">Transfer Funds</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-credit-card"></i><span class="hide-menu"> Pay Bills </span></a>
+                        </li>
+                        <!-- <li class="nav-small-cap">--- FORMS, TABLE &amp; WIDGETS</li> -->
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-layout-media-right-alt"></i><span class="hide-menu">Mobile
+                                    Banking</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-layout-accordion-merged"></i><span class="hide-menu">Prepaid
+                                    Reload</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-settings"></i><span class="hide-menu">Western Union</span></a>
+                        </li>
+                        <!-- <li class="nav-small-cap">--- EXTRA COMPONENTS</li> -->
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-gallery"></i><span class="hide-menu">Remittance</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-files"></i><span class="hide-menu">e-Application</span></a>
+                        </li>
+
+                        <!-- <li class="nav-small-cap">--- SUPPORT</li> -->
+                        <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i
+                                    class="fa fa-circle-o text-success"></i><span class="hide-menu">Log Out</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+
+        <div class="page-wrapper">
+
+            <div class="container-fluid">
+                    <section class="container">
+                            <div class="row my-account">
+                                <div class="col-md-3">
+                                    <div class="card card-profile shadow" style="width: 18rem;">
+                                        <img class="img-fluid profile-card" src="../img/customer1.png" alt="profile-picture">
+                                        <h5 class="text-center">Ifeoluwasimi olusola</h5>
+                                        <div class="card-body">
+                                            <div class="text-center">
+                                                <button class="btn px-4 rounded">Hire a Worker</button>
+                                            </div>
+            
+                                            <hr>
+            
+                                            <h5 class="mt-2">Contact Information</h5>
+            
+                                            <div class="mt-4">
+                                                <h6 class="pb-0 mb-0">E-mail Address</h6>
+                                                <p class="text-left">o.Ifeoluwasimi@gmail.com</p>
+                                            </div>
+            
+                                            <div>
+                                                <h6 class="pb-0 mb-0">Phone Number</h6>
+                                                <p class="text-left pb-4">08012345678</p>
+                                            </div>
+            
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8 offset-1">
+                                    <div class="card card-profile shadow">
+                                        <div class="card-header d-flex justify-content-between">
+                                            <h5>My Profile</h5>
+                                            <span><i class="fas fa-pencil-alt"></i></span>
+                                        </div>
+                                        <div class="card-body">
+                                            <!-- <h5 class="card-title border border-dark p-2 mb-4">Profile</h5> -->
+                                            <div class="row">
+                                                <div class="col-md-3">
+                                                    <figure>
+                                                        <img class="img-fluid mt-0" id="profile-picture" src="../img/customer1.png"
+                                                            alt="profile-picture">
+                                                    </figure>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="first-name">First Name</label>
+                                                    <input type="text" id="first-name" class="form-control">
+            
+                                                    <label for="email" class="mt-4">Email Address</label>
+                                                    <input type="email" id="email" class="form-control">
+                                                </div>
+            
+                                                <div class="col-md-4">
+                                                    <label for="last-name" class="mt-0"> Last Name</label>
+                                                    <input type="text" id="last-name" class="form-control">
+            
+                                                    <label for="phone-number">Phone Number</label>
+                                                    <input type="tel" id="phone-number" class="form-control">
+                                                </div>
+            
+                                            </div>
+            
+                                            <!-- <h5 class="card-title border border-dark p-2 mb-2 mt-4">Saved Addresses</h5> -->
+                                            <div class="row mt-5">
+                                                <div class="col-md-6">
+                                                    <textarea class="form-control address" rows="5" cols="100"
+                                                        placeholder="Address"></textarea>
+                                                </div>
+                                                <div class="col-md-6">
+                                                    <textarea class="form-control address" rows="5" cols="100"
+                                                        placeholder="Address"></textarea>
+                                                </div>
+                                            </div>
+                                            <div class="d-flex mt-1">
+                                                <span><i class="fas fa-plus"></i></span>
+                                                <p>Add a new address</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </section>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/popper/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+
+     <!-- Chart JS -->
+     <script src="dist/js/dashboard1.js"></script>
+     <script src="assets/node_modules/toast-master/js/jquery.toast.js"></script>
+
+
+    <!-- Chart JS -->
+    <script src="../dist/js/dashboard1.js"></script>
+    <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+
+    <!-- custom Js -->
+</body>
+
+</html>

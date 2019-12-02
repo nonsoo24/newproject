@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon.png">
+    <title>Bank</title>
+    <!-- This page CSS -->
+    <!-- chartist CSS -->
+    <link href="../assets/node_modules/morrisjs/morris.css" rel="stylesheet">
+    <!--Toaster Popup message CSS -->
+    <link href="../assets/node_modules/toast-master/css/jquery.toast.css" rel="stylesheet">
+    <link href="../assets/node_modules/css-chart/css-chart.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="../dist/css/style.min.css" rel="stylesheet">
+    <!-- Dashboard 1 Page CSS -->
+    <link href="../dist/css/pages/timeline-vertical-horizontal.css" rel="stylesheet">
+    <link href="../dist/css/pages/dashboard1.css" rel="stylesheet">
+    <style>
+        .topbar .navbar-collapse {
+            background: #0063B1;
+        }
+    </style>
+</head>
+
+<body class="wp-menu skin-blue-dark fixed-layout">
+    <!-- ============================================================== -->
+    <!-- Preloader - style you can find in spinners.css -->
+    <!-- ============================================================== -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="loader__figure"></div>
+            <p class="loader__label"></p>
+        </div>
+    </div>
+    <!-- ============================================================== -->
+    <!-- Main wrapper - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <div id="main-wrapper">
+        <!-- ============================================================== -->
+        <!-- Topbar header - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <header class="topbar">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+                <!-- ============================================================== -->
+                <!-- Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+
+                    </a>
+                </div>
+                <!-- ============================================================== -->
+                <!-- End Logo -->
+                <!-- ============================================================== -->
+                <div class="navbar-collapse">
+                    <!-- ============================================================== -->
+                    <!-- toggle and nav items -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav mr-auto">
+                        <!-- This is  -->
+                        <li class="nav-item"> <a class="nav-link nav-toggler d-block d-sm-none waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="ti-menu"></i></a> </li>
+                        <li class="nav-item"> <a
+                                class="nav-link sidebartoggler d-none d-lg-block d-md-block waves-effect waves-dark"
+                                href="javascript:void(0)"><i class="icon-menu"></i></a> </li>
+                        <!-- ============================================================== -->
+                        <!-- Search -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item">
+                            <form class="app-search d-none d-md-block d-lg-block">
+                                <input type="text" class="form-control" placeholder="Search & enter">
+                            </form>
+                        </li>
+                    </ul>
+                    <!-- ============================================================== -->
+                    <!-- User profile and search -->
+                    <!-- ============================================================== -->
+                    <ul class="navbar-nav my-lg-0">
+                        <!-- ============================================================== -->
+                        <!-- Comment -->
+                        <!-- ============================================================== -->
+                        <!-- End Comment -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+
+                        <!-- ============================================================== -->
+                        <!-- End Messages -->
+                        <!-- ============================================================== -->
+                        <!-- ============================================================== -->
+                        <!-- mega menu -->
+                        <!-- ============================================================== -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <img
+                                    src="../img/clientIcon.png" alt="profile-picture" class="profile-picture">
+                            </a>
+                            <div class="dropdown-menu mailbox dropdown-menu-right animated bounceInDown"
+                                aria-labelledby="2">
+                                <ul>
+
+                                    <div class="message-center">
+                                        <!-- Message -->
+                                        <a href="profile.html">
+                                            <div class="mail-contnet">
+                                                <h5>My profile</h5>
+                                            </div>
+                                        </a>
+                                        <!-- Message -->
+                                        <a href="javascript:void(0)">
+                                            <div class="mail-contnet">
+                                                <h5>Log out</h5>
+                                            </div>
+                                        </a>
+                                    </div>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- ============================================================== -->
+        <!-- End Topbar header -->
+        <!-- ============================================================== -->
+        <!-- ============================================================== -->
+        <!-- Left Sidebar - style you can find in sidebar.scss  -->
+        <!-- ============================================================== -->
+        <aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- User Profile-->
+
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <!-- <li class="nav-small-cap">--- PERSONAL</li> -->
+                        <li> <a class="waves-effect waves-dark" href="new.html" aria-expanded="false"><i
+                                    class="icon-speedometer"></i><span class="hide-menu">Dashboard</a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="account-enquiry.html" aria-expanded="false"><i
+                                    class="ti-layout-grid2"></i><span class="hide-menu">Account Enquiry</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="transfer-new.html" aria-expanded="false"><i
+                                    class="ti-email"></i><span class="hide-menu">Transfer Funds</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-credit-card"></i><span class="hide-menu"> Pay Bills </span></a>
+                        </li>
+                        <!-- <li class="nav-small-cap">--- FORMS, TABLE &amp; WIDGETS</li> -->
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-layout-media-right-alt"></i><span class="hide-menu">Mobile
+                                    Banking</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-layout-accordion-merged"></i><span class="hide-menu">Prepaid
+                                    Reload</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-settings"></i><span class="hide-menu">Western Union</span></a>
+                        </li>
+                        <!-- <li class="nav-small-cap">--- EXTRA COMPONENTS</li> -->
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-gallery"></i><span class="hide-menu">Remittance</span></a>
+                        </li>
+                        <li> <a class="waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i
+                                    class="ti-files"></i><span class="hide-menu">e-Application</span></a>
+                        </li>
+
+                        <!-- <li class="nav-small-cap">--- SUPPORT</li> -->
+                        <li> <a class="waves-effect waves-dark" href="pages-login.html" aria-expanded="false"><i
+                                    class="fa fa-circle-o text-success"></i><span class="hide-menu">Log Out</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+        </aside>
+
+        <div class="page-wrapper">
+
+            <div class="container-fluid">
+                <div id="content2">
+                    <div class="secure text-right">
+                        <h6 class="text-white p-1 banner" id="banner-message">You are in a secured site</h6>
+                    </div>
+                    <div class="d-flex container">
+                        <h4 class="title text-danger">Personal Banking</h4>
+                    </div>
+
+                    <section class="container">
+                        <div class="d-flex pt-5">
+                            <div class="transfer-image">
+                                <img src="{% static 't/img/picture.jpg'%}" alt style="width: 250px; height: 250px">
+                            </div>
+                            <div class="transfer-info p-4 justify-content-center">
+                                <h4>Transfer <span class="text-danger">Funds</span></h4>
+                                <p>You can transfer any available amount to your own EpicEuro Bank Accounts or other
+                                    Accounts in
+                                    other banks anywhere in the world.</p>
+                                <p class="text-sm">For security reasons, the bank will limit your transfer to third
+                                    party
+                                    accounts within
+                                    Stacord Bank at $5,000.00 and other Banks at $50,000.00 per day. For Non-Resident
+                                    Account,
+                                    there is no limit to the amount you can transfer.</p>
+                            </div>
+                        </div>
+                        <p class="pt-3">Our loan/financing system is available from 7.00am to 8.00pm daily. Payment to
+                            loan/financing is only accepted during these hours.</p>
+                    </section>
+                    <div class="pb-5">
+                        <table>
+                            <tr>
+                                <td>
+                                    <form>
+                                        <h4>Clicks Transactions</h4>
+                                        <div class="alert alert-info" role="alert">Please Enter Your Password!
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="staticEmail">Account
+                                                Name:</label>
+                                            <div class="col-sm-3">
+                                                <input class="form-control-plaintext" id="staticEmail" type="text"
+                                                    readonly value="{{ user.full_name }}">
+                                            </div>
+                                        </div>
+
+                                        <div class="form-group row">
+                                            <label class="col-sm-2 col-form-label" for="auth-password">Password:</label>
+                                            <div class="col-sm-3">
+                                                <input class="form-control" id="auth-password" type="password"
+                                                    placeholder="Enter Password" autofocus>
+                                                <div class="mb-2" id="auth-password-error"></div>
+                                                <button class="btn btn-outline-primary" id="next-button"
+                                                    type="button">Next</button>
+                                            </div>
+                                        </div>
+
+                                    </form>
+
+
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!-- All Jquery -->
+    <!-- ============================================================== -->
+    <script src="../assets/node_modules/jquery/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap popper Core JavaScript -->
+    <script src="../assets/node_modules/popper/popper.min.js"></script>
+    <script src="../assets/node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- slimscrollbar scrollbar JavaScript -->
+    <script src="../dist/js/perfect-scrollbar.jquery.min.js"></script>
+    <!--Wave Effects -->
+    <script src="../dist/js/waves.js"></script>
+    <!--Menu sidebar -->
+    <script src="../dist/js/sidebarmenu.js"></script>
+    <!--Custom JavaScript -->
+    <script src="../dist/js/custom.min.js"></script>
+    <!-- ============================================================== -->
+    <!-- This page plugins -->
+    <!-- ============================================================== -->
+
+     <!-- Chart JS -->
+     <script src="../dist/js/dashboard1.js"></script>
+     <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+ 
+
+    <!-- Chart JS -->
+    <script src="../dist/js/dashboard1.js"></script>
+    <script src="../assets/node_modules/toast-master/js/jquery.toast.js"></script>
+
+    <!-- custom Js -->
+
+         <!-- sweet alert -->
+         <script src="https://unpkg.com/sweetalert/../dist/sweetalert.min.js"></script>
+         <script src="../transferAuth.js" type="text/javascript"></script>
+</body>
+
+</html>
