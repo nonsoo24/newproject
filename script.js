@@ -6,6 +6,14 @@ const tacErrorMessage = document.querySelector('#tac-error');
 const button = document.querySelector('#btn-continue');
 // console.log(password);
 
+$(document).ready(function () {
+
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
+});
+
 
 
 

@@ -64,14 +64,16 @@ nav ul li:nth-last-child() a:hover {
 .wrapper {
     display: flex;
     width: 100%;
+    align-items: stretch;
 }
 
 #sidebar {
-    width: 250px;
+    min-width: 250px;
+    max-width: 250px;
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
+    min-height: 100vh;
     /* overflow-y: scroll; */
     /* z-index: 999; */
     /* background: #7386D5; */
@@ -81,7 +83,9 @@ nav ul li:nth-last-child() a:hover {
 }
 
 #sidebar.active {
-    margin-left: -250px;
+    min-width: 80px;
+    max-width: 80px;
+    text-align: center;
 }
 
 #sidebar .sidebar-header {
@@ -156,6 +160,22 @@ a.article,
 a.article:hover {
     background: #6d7fcc !important;
     color: #fff !important;
+}
+
+
+#sidebarCollapse {
+    width: 40px;
+    height: 40px;
+    background: #6d7fcc;
+}
+
+#sidebarCollapse span {
+    width: 80%;
+    height: 2px;
+    margin: 0 auto;
+    display: block;
+    background: #555;
+    transition: all 0.8s cubic-bezier(0.810, -0.330, 0.345, 1.375);
 }
 
 /* ---------------------------------------------------
